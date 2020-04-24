@@ -78,38 +78,10 @@ const pressBtnToAdd = ()=> {
    btnAddEvenListner(productsSection);
 }
 
-function btnAddEvenListner(arr) {
-        arr.addEventListener('click', (e) => {
+const btnAddEvenListner=(items)=> {
+        items.addEventListener('click', (e) => {
             addToShoppingCart(e);
         });
 }
 /********************************************************************** 
 **********************************************************************/
-
-
-
-
-
-
-/**
- * * Press the btn to add a new item...
- *  const addToShoppingCart = (e)=>{
-     let targetElement = e.target.id;
-     let url = `http://localhost:5000/api/cart/addItem?id=${targetElement}`;
-     fetch(url, { method: 'POST' })
-         .then(res => res.json())
-         .then(data => console.log(data.id))
-         .catch(err => console.error(err));
- }
-
-const pressBtnToAdd = ()=> {
-   const itemArr = document.querySelector('.add-to-cart');
-   addFunction(itemArr);
-    
-}
-function addFunction(arr) {
-    for (let i = 0; i < arr.length; i++) { }
-        arr.addEventListener('click', (e) => addToShoppingCart(e));
-   
-}
- */

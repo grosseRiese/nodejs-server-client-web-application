@@ -67,8 +67,8 @@ const pressBtnToRemove = ()=> {
     btnAddEvenListner(tbody);
  }
  
- function btnAddEvenListner(arr) {
-         arr.addEventListener('click', (e) => {
+const btnAddEvenListner=(items)=>{
+         items.addEventListener('click', (e) => {
             deleteFromShoppingCart(e);
          });
 }
