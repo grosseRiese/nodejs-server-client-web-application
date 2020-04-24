@@ -1,7 +1,5 @@
 
 let myCart = document.querySelector('#my-cart');
-//import btnAddEvenListner from './modules/client-module.js';
-
 const loopDataInHtml = (results) =>{
     
     const productColumns = document.querySelector('#productsSection');
