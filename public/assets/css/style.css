@@ -1,0 +1,69 @@
+
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #EBEBEB;
+}
+/************************************************************************/
+.bg-dark {
+    background-color: #3f9497!important;
+}
+.navbar-icon-top .navbar-nav .nav-link > .fa {
+    position: relative;
+    width: 36px;
+    font-size: 24px;
+  }
+  
+  .navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
+    font-size: 0.75rem;
+    position: absolute;
+    right: 0;
+    font-family: sans-serif;
+  }
+  
+  .navbar-icon-top .navbar-nav .nav-link > .fa {
+    top: 3px;
+    line-height: 12px;
+  }
+
+/***********************************************************************************/
+card-product .img-wrap {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+    text-align: center;
+}
+.card-product .img-wrap img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.card-product .info-wrap {
+    overflow: hidden;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+.card-product .bottom-wrap {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+.card-product .price-old {
+    color: #999;
+}
+/*********************************************************/
+.my-first-section{
+    height:100vh;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-image: url('/assets/img/cover_4_blur.jpg');
+}
+/********************************************************************/
+
+
+

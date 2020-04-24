@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>E-Handel</title>
+</head>
+<body>
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"> COMPRAR EN LINIA </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#productsSection">
+              <i class="fa fa-home"></i>
+              Products 
+              <span class="sr-only">(current)</span>
+              </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="./cart.html">
+              <i class="fa fa-shopping-cart" >
+                <span class="badge badge-warning" id="my-cart" style="margin-right: -0.22rem;">0</span>
+               </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark my-first-section">
+        <section class="container-fluid">
+           <article class="row  justify-content-center align-items-center d-flex text-center h-100">
+             <div class="col-12 col-md-8  h-50 ">
+                <h1 class="display-2  text-light mb-2 mt-5"><strong>BUNGALOW SHOP</strong> </h1>
+                <p class="lead  text-light mb-5"><b>AWESOME products and <i>BEAUTIFUL</i> items</b></p>
+                <p><a href="#productsSection" class="btn bg-info shadow-lg btn-round text-light btn-lg btn-rised">Go to products ></a></p>
+                <div class="btn-container-wrapper p-relative d-block  zindex-1">
+                    <a class="btn btn-link btn-lg   mt-md-3 mb-4 scroll align-self-center text-light" href="#productsSection">
+                        <i class="fa fa-angle-down fa-4x text-light"></i>
+                    </a>   
+                </div>   
+             </div>
+           </article>
+        </section>
+    </header>
+    <main class="container">
+      <section class="row" id="productsSection">
+      </section>
+    </main>
+
+    <!--- **********//script section ***************-->
+    <script type="module" src="./js/index.js"> </script>
+</body>
+</html>

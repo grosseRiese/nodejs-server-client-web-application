@@ -1,0 +1,28 @@
+{
+  "name": "assignment-1",
+  "version": "1.0.0",
+  "description": "assignment to e-handel ",
+  "main": "BASIC-server.js",
+  "scripts": {
+    "watch": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "omran",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "nodemonConfig": {
+    "delay": 2000,
+    "ignore": [
+      "*/*.css",
+      "dist/*",
+      "docs/*"
+    ]
+  }
+}
