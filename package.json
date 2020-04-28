@@ -7,7 +7,7 @@
     "watch": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "omran",
+  "author": "The master: O*M*R*A*N",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
