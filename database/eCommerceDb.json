@@ -4,79 +4,79 @@
       "id": 1,
       "product": "Beautiful Mug",
       "price": "89",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042730"
     },
     {
       "id": 2,
       "product": "Golden Spoon",
       "price": "440",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042731"
     },
     {
       "id": 3,
       "product": "Anti All Shoe",
       "price": "599",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042732"
     },
     {
       "id": 4,
       "product": "Good Jeans",
       "price": "199",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042733"
     },
     {
       "id": 5,
       "product": "A pair of socks",
       "price": "149",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042734"
     },
     {
       "id": 6,
       "product": "A pair of boxers",
       "price": "299",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042735"
     },
     {
       "id": 7,
       "product": "Boomerang Sweater",
       "price": "3990",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042736"
     },
     {
       "id": 8,
       "product": "Crocodile Jacket",
       "price": "3990",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042737"
     },
     {
       "id": 9,
       "product": "Crazy Bag",
       "price": "990",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042738"
     },
     {
       "id": 10,
       "product": "Cap with hotdogs",
       "price": "499",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042739"
     },
     {
       "id": 11,
       "product": "Happy bag",
       "price": "1990",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042740"
     },
     {
       "id": 12,
       "product": "Donald Trump",
       "price": "1",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042741"
     },
     {
       "id": 13,
       "product": "Chicken Burger USB Hub",
       "price": "299",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042742"
     }
   ],
   "cart": [
@@ -84,25 +84,25 @@
       "id": 13,
       "product": "Chicken Burger USB Hub",
       "price": "299",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042742"
     },
     {
       "id": 12,
       "product": "Donald Trump",
       "price": "1",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042741"
     },
     {
       "id": 10,
       "product": "Cap with hotdogs",
       "price": "499",
-      "image": "https://placeimg.com/640/480/any"
+      "image": "https://placeimg.com/640/480/tech?t=2020042739"
     },
     {
-      "id": 6,
-      "product": "A pair of boxers",
-      "price": "299",
-      "image": "https://placeimg.com/640/480/any"
+      "id": 3,
+      "product": "Anti All Shoe",
+      "price": "599",
+      "image": "https://placeimg.com/640/480/tech?t=2020042732"
     }
   ],
   "count": 4
