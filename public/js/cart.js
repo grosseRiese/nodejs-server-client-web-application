@@ -31,15 +31,10 @@
                                 </tr> `;
         productInCart.append(resultsItem);
     });
-
     sumCartItemsClass.append(sum);
     sumCartItemsID.append(sum);
     pressBtnToRemove();
-    //console.log(sum);
-    //console.log(numberOfitems);
-    //console.log(itemsInCart(numberOfitems));
 }
-
 const getCartItems = async ()=> {
     let url = 'http://localhost:5000/api/cart/getCartItems'
    await fetch(url, { method: 'GET' })
@@ -48,9 +43,8 @@ const getCartItems = async ()=> {
         .catch(err => console.error('Error: ' + err));
 }
 getCartItems();
-
 /************************************************************************************
- * Press the btn to remove an item...
+ * ...  to remove an item...
  ************************************************************************************/
 const deleteFromShoppingCart = (e)=> {
     let targetElement = e.target.id;
@@ -65,8 +59,7 @@ const deleteFromShoppingCart = (e)=> {
 const pressBtnToRemove = ()=> {
     const tbody = document.querySelector('#myProductsInMyCart');
     btnAddEvenListner(tbody);
- }
- 
+}
 const btnAddEvenListner=(items)=>{
          items.addEventListener('click', (e) => {
             deleteFromShoppingCart(e);

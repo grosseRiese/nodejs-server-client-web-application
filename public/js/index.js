@@ -1,12 +1,10 @@
 
 let myCart = document.querySelector('#my-cart');
 const loopDataInHtml = (results) =>{
-    
     const productColumns = document.querySelector('#productsSection');
     results.forEach(element => { 
         let resultsItem = document.createElement('article');
         resultsItem.setAttribute('class', 'col-md-4');
-        //resultsItem.setAttribute('id', element.id);
         resultsItem.innerHTML = `<figure class="card card-product">
                                     <div class="img-wrap">
                                         <img src="${element.image}">
@@ -35,9 +33,7 @@ const getProducts = async ()=> {
         .catch(err => console.error('Error: ' + err));
 }
 getProducts();
-
-//Acount the items in my Cart...
-
+//Acount the items in my Cart..
 let countItemsInCart = (data)=> {
     let acouItems = 0;
     data.forEach(element => {
@@ -55,11 +51,9 @@ const getCartItems=()=>{
         .catch(err => console.error(err))
 }
 getCartItems();
-
 /********************************************************************** 
-* Press the btn to add a new item...
+* ...  to add a new item...
 **********************************************************************/
- 
  const addToShoppingCart = (e)=>{
      let targetElement = e.target.id;
      let url = `http://localhost:5000/api/cart/addItem?id=${targetElement}`;
@@ -67,15 +61,12 @@ getCartItems();
          .then(res => res.json())
          .then(data => console.log(data.message))
          .catch(err => console.error(err));
-
          getCartItems();
  }
-
 const pressBtnToAdd = ()=> {
    const productsSection = document.querySelector('#productsSection');
    btnAddEvenListner(productsSection);
 }
-
 const btnAddEvenListner=(items)=> {
         items.addEventListener('click', (e) => {
             addToShoppingCart(e);

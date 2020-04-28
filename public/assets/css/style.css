@@ -11,7 +11,7 @@ body {
 }
 /************************************************************************/
 .bg-dark {
-    background-color: #3f9497!important;
+    background-color: #3f9497 !important;
 }
 .navbar-icon-top .navbar-nav .nav-link > .fa {
     position: relative;
@@ -60,8 +60,9 @@ card-product .img-wrap {
 .my-first-section{
     height:100vh;
     margin-bottom: 1rem;
-    background-size: cover;
     background-image: url('/assets/img/cover_4_blur.jpg');
+    background-size: cover;
+    
 }
 /********************************************************************/
 
