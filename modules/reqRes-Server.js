@@ -1,7 +1,5 @@
 module.exports = (app, db) => {
-   
      /**
-     * 
      * Products section
      */
     //all products in db.
@@ -11,17 +9,14 @@ module.exports = (app, db) => {
     //Get all products ...api.
     app.get('/api/getAllProducts',async (req,res)=>{
         let _products = await allProducts();
-        //console.log(_products);
         res.send(JSON.stringify(_products));
     });
     //Get a product :id ...api.
     app.get('/api/getProduct/:id',async (req, res) => {
         let selectedProduct = await allProducts().filter(item => item.id == parseInt(req.params.id)); 
-        console.log(selectedProduct);
         res.send(JSON.stringify(selectedProduct));
     });
-    /**
-     * 
+    /** 
      * Cart section
      */
     //All items in cart-db
@@ -31,13 +26,11 @@ module.exports = (app, db) => {
     //get all items in cart -req-
     app.get('/api/cart/getCartItems', async (req, res) => {
         let allItems = await allCartItems();
-        //console.log(allItems);
         res.send(JSON.stringify(allItems));
     });
     //Get item by :id
     app.get('/api/cart/getCartItem/:id', async (req, res) => {
         let selectedItem = await allCartItems().filter(item => item.id == parseInt(req.params.id));
-        console.log(selectedItem);
         res.send(JSON.stringify(selectedItem));
     });
     // Add operations...search after that porduct in products[]!
@@ -48,14 +41,11 @@ module.exports = (app, db) => {
     }
     //Validate before add to cart
     const addToCart = async (sendProduct, res) => {  
-
     try{   
-
         let findProduct = await db.get('cart')
                             .find( {id : parseInt(sendProduct.id),
                                     product : sendProduct.product})
                             .value();
-
         let responseSuccess = {
             Success:true,
             message: 'Product has added to shopping Cart'
@@ -64,22 +54,18 @@ module.exports = (app, db) => {
             Status: 'Error: - What you doing!?',
             message: 'Cann\'t add this , the product is already in shopping Cart!'
         }
-     
        findProduct != undefined
-                    ? ( res.send(JSON.stringify(responseError)),
-                        console.log(responseError))
+                    ? ( res.send(JSON.stringify(responseError)))
                     : ( db.get('cart').push(sendProduct).write(),
                         res.send(JSON.stringify(responseSuccess)),
                         incrementCount(),
-                        sumOfPriceToCartItems(),
-                        console.log(responseSuccess ,itemsNumInCart()) );  
+                        sumOfPriceToCartItems());  
         }catch{
             message = {
                 status: 'Not valid',
                 message: 'Product not found or something went wrong!'
             };
              res.send(JSON.stringify(message));
-             console.log(message);
         } 
     }
     /***
@@ -88,7 +74,6 @@ module.exports = (app, db) => {
      */
     app.post('/api/cart/addItem', async (req, res) => {
         let sendItem = req.query;
-        console.log(sendItem);
         await addToCart(searchProduct(sendItem), res);
     });
     // Delete operations...search after that porduct in cart[]!
@@ -99,7 +84,6 @@ module.exports = (app, db) => {
     }
       //Validate before delete from cart
     const removeFromCart = async (sendMatchedItem, res) => {
-      
       let responseSuccess = {
           Success:true,
           message: 'Product has deleted from shopping Cart'
@@ -108,15 +92,12 @@ module.exports = (app, db) => {
           Status: 'Error: Bad bad bad!',
           message: 'There is no such as product in shopping Cart!'
       }
-     
       sendMatchedItem != undefined
                   ? ( db.get('cart').remove(sendMatchedItem).write(),
                       res.send(JSON.stringify(responseSuccess)),
                       decrementCount(),
-                      sumOfPriceToCartItems(),
-                      console.log(responseSuccess, itemsNumInCart() ))
-                  : ( res.send(JSON.stringify(responseError)),
-                      console.log(responseError));
+                      sumOfPriceToCartItems())
+                  : ( res.send(JSON.stringify(responseError)));
     }
      /***
      * Delete item
@@ -124,7 +105,6 @@ module.exports = (app, db) => {
      */
     app.delete('/api/cart/removeItem',async (req, res) => {
         let deleteSentItem = req.query;
-        console.log(deleteSentItem);
         await removeFromCart(findCartsProduct(deleteSentItem), res);
     });
      // Increment count by 1
@@ -148,6 +128,5 @@ module.exports = (app, db) => {
         arrayMyPrice.forEach(element => {
            return sum += parseInt( element.price) ; 
         });
-       console.log('Sum for each one : ', sum)
     }
 }
